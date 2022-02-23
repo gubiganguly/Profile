@@ -1,0 +1,38 @@
+
+
+### Get All Profiles
+GET http://localhost:5000/profile/
+
+
+### Get Profile by account
+GET http://localhost:5000/profile/0xaba7161a7fb69c88e16ed9f455ce62b791ee4d03
+
+
+### Get Profile by name
+GET http://localhost:5000/profile/BoredApeYachtClub
+
+
+### Create Profile
+POST http://localhost:5000/profile/
+Content-Type: application/json
+
+{
+    "account": "0xaba7161a7fb69c88e16ed9f455ce62b791ee4d03",
+    "profileImage": "https://lh3.googleusercontent.com/QVKs1azRCjHftLYaPMFlMPa29ECEsqLGzMckQKrzttoVAFRwJTZ11fOW68smiO_QNsCECvyqaJyqYVNwd3Gz_TZCQJ5FyLapAT9qJg0=s0",
+    "name": "BoredApeYachtClub",
+    "profileDescript": "BAYC is a collection of 10,000 Bored Ape NFTs. Owning a Bored Ape doubles as your membership to the Club."
+}
+
+
+### Patch Profile
+PATCH http://localhost:5000/profile/0xaba7161a7fb69c88e16ed9f455ce62b791ee4d03
+Content-Type: application/json
+
+{
+    "name": "Changed Name"
+
+}
+
+
+### Delete Profile by Id
+DELETE  http://localhost:5000/profile/0xaba7161a7fb69c88e16ed9f455ce62b791ee4d03

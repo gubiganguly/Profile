@@ -5,6 +5,7 @@ import searchIcon from '../assets/header/search.png'
 import themeSwitchIcon from '../assets/header/theme-switch.png'
 import {Link} from 'react-router-dom'
 import { useHistory } from 'react-router'
+import { CgProfile } from 'react-icons/cg'
 
 
 
@@ -59,7 +60,7 @@ const Header = ({ setProfile }) => {
                     className='searchInput' 
                     onKeyDown={(e) => {
                         if(e.key === 'Enter') {
-                            setProfile(e.target.value)
+                            localStorage.setItem('profile', e.target.value)
                             history.push(`/profile/${e.target.value}`)    
                         }
                     }} 
@@ -68,7 +69,9 @@ const Header = ({ setProfile }) => {
             </div>
 
             <div className='headerItems'>
-				<Link className="profile" to="/profile">Profile</Link>
+				<Link className="profile" to="/profile">
+                    <CgProfile size={30} />
+                </Link>
                 <Link className="about" to="/">About</Link>
             </div>
             

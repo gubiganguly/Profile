@@ -8,23 +8,20 @@ import Profile from './components/profile/Profile';
 
 function App() {
 
-  const [profile, setProfile] = useState('NULL');
-
-
-  console.log("Searched Profile: ", profile)
+  console.log("Searched Profile: ", localStorage.getItem('profile'))
   console.log("Connected Account: ", localStorage.getItem('account'))
 
   return (
     <Router>
       <div className="App">
-        <Header setProfile={setProfile}/>
+        <Header />
         <div className='content'>
           <Switch>
             <Route exact path="/">
               <Home />
             </Route>
             <Route exact path="/profile/:account">
-              <Profile account={profile} isUser={false} />
+              <Profile isUser={false} />
             </Route>
           </Switch>
         </div>

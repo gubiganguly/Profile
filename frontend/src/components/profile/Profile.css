@@ -1,0 +1,30 @@
+.profilePage {
+    align-items: center;
+    justify-content: center;
+}
+
+.profileHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageContainer {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+}
+
+.imageContainer > img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.postsOrProducts {
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
